@@ -82,3 +82,12 @@ function multiplicarMismo(num){
 multiplicarMismo(12)
 
 alert(`este es el resultado de la multiplicacion`)
+
+//mejoras del instructor a una funcion
+function encontrarMayor(a, b) {
+    return a > b ? a : b;
+  }
+  
+  let numeroMayor = encontrarMayor(15, 9);
+  console.log(numeroMayor);
+
