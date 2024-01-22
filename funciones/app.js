@@ -41,29 +41,43 @@ function saludarPersona(nombre){
     alert(`Hola, ${nombre}`);
 }
 
+saludarPersona('katia')
+
 function double(n){
-    let dou = n ** 2
+    let dou = parseInt(n ** 2)
     console.log(dou);
     return dou
 }
 
+double(10)
+
 function promedio(x,y,z){
     let suma = parseInt(x + y + z);
     let promedio = suma / 3;
-    return promedio;
     console.log(promedio)
+    return promedio;
+    
 }
 
+promedio(2,4,6)
+
 function mayorMenor(x, y){
-    if ( x > y){
+    let x = parseInt(prompt('introduce un numero x'))
+    let y = parseInt(prompt('introduce un numero y'))
+
+    if ( x > y) {
         alert(`${x} es el mayor`)
     } else {
         alert(`${y} es el mayor`)
     }
 }
 
+alert(`eso fue mayor y menor`)
+
+
 function multiplicarMismo(num){
-    let mul = num * num
-    console.log(mul)
+    console.log(num)
+    return num * num
 }
 
+alert(`este es el resultado de la multiplicacion`)
