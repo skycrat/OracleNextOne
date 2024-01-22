@@ -27,3 +27,43 @@ function generarNumeroSecreto() {
 
 asignarTextoElemento('h1','Juego del número secreto!');
 asignarTextoElemento('p',`Indica un número del 1 al 10`);
+
+
+
+//desafios
+function saludar(palabra){
+    alert(`${palabra}`);
+}
+
+saludar('Hola, Mundo')
+
+function saludarPersona(nombre){
+    alert(`Hola, ${nombre}`);
+}
+
+function double(n){
+    let dou = n ** 2
+    console.log(dou);
+    return dou
+}
+
+function promedio(x,y,z){
+    let suma = parseInt(x + y + z);
+    let promedio = suma / 3;
+    return promedio;
+    console.log(promedio)
+}
+
+function mayorMenor(x, y){
+    if ( x > y){
+        alert(`${x} es el mayor`)
+    } else {
+        alert(`${y} es el mayor`)
+    }
+}
+
+function multiplicarMismo(num){
+    let mul = num * num
+    console.log(mul)
+}
+
