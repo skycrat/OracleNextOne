@@ -62,9 +62,6 @@ function promedio(x,y,z){
 promedio(2,4,6)
 
 function mayorMenor(x, y){
-    let x = parseInt(prompt('introduce un numero x'))
-    let y = parseInt(prompt('introduce un numero y'))
-
     if ( x > y) {
         alert(`${x} es el mayor`)
     } else {
@@ -72,12 +69,16 @@ function mayorMenor(x, y){
     }
 }
 
+mayorMenor(17, 20)
+
 alert(`eso fue mayor y menor`)
 
 
 function multiplicarMismo(num){
-    console.log(num)
-    return num * num
+    let mul = Math.pow(num, 2)
+    console.log(mul)
 }
+
+multiplicarMismo(12)
 
 alert(`este es el resultado de la multiplicacion`)
