@@ -8,6 +8,11 @@ function asignarTextoElemento(elemento, texto) {
     return;
 }
 
+function verificarIntento() {
+    let numeroDeUsuario = document.getElementById('valorUsuario').value;
+    return;
+}
+
 
 function generarNumeroSecreto() {
     return Math.floor(Math.random()*10)+1;
