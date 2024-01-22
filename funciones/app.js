@@ -9,10 +9,13 @@ function asignarTextoElemento(elemento, texto) {
 }
 
 function verificarIntento() {
-    let numeroDeUsuario = document.getElementById('valorUsuario').value;
+    let numeroDeUsuario = parseInt(document.getElementById('valorUsuario').value);
     console.log(numeroDeUsuario);
     console.log(numeroSecreto);
-    console.log(numeroDeUsuario == numeroSecreto);
+
+    //el triple igual es una validacion que sale verdadera si es igual
+    //en valor y en tipo de datos, de lo contrario resulta falso
+    console.log(numeroDeUsuario === numeroSecreto);
     return;
 }
 
