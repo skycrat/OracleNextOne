@@ -18,8 +18,8 @@ function verificarIntento(){
         } else {
                 asignarTextoElemento('p', 'El número secreto es mayor');
             }
-            intentos++;
         }
+    intentos++;
     return;
 }
 
