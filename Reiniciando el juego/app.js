@@ -19,9 +19,9 @@ function verificarIntento(){
         } else {
                 asignarTextoElemento('p', 'El número secreto es mayor');
         }
-        intentos++;
-        limpiarCaja()
         }
+    intentos++;
+    limpiarCaja()
     return;
 }
 
@@ -35,8 +35,7 @@ function verificarIntento(){
    */
 
 function limpiarCaja(){
-    let valorCaja = document.querySelector('#valorUsuario');
-    valorCaja.value = '';
+    document.querySelector('#valorUsuario').value = '';
 }
 
 function generarNumeroSecreto(){
