@@ -4,7 +4,7 @@ let intentos = 1
 function asignarTextoElemento(elemento, texto){
     let elementoHTML = document.querySelector(elemento);
     elementoHTML.innerHTML = texto;
-    //return;
+    return;
 }
 
 function verificarIntento(){
@@ -19,9 +19,11 @@ function verificarIntento(){
         } else {
                 asignarTextoElemento('p', 'El número secreto es mayor');
         }
-        }
-    intentos++;
-    limpiarCaja()
+        intentos++;
+        limpiarCaja()
+
+    }
+
     return;
 }
 
@@ -32,7 +34,7 @@ function verificarIntento(){
    en el caso de querySelector, que es un selector genérico, 
    le tenemos que decir que en este caso lo que queremos es por ID, 
    usamos el numeral.
-   */
+*/
 
 function limpiarCaja(){
     document.querySelector('#valorUsuario').value = '';
