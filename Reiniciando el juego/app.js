@@ -8,11 +8,27 @@ function asignarTextoElemento(elemento, texto){
 
 function verificarIntento(){
     let numeroDeUsuario = parseInt(document.getElementById('valorUsuario').value)
+    
+    if (numeroSecreto === numeroDeUsuario) 
+    {
+        asignarTextoElemento('p', 'Acertaste el número');
+    
+    }  else {
+
+        if (numeroDeUsuario > numeroSecreto){
+            asignarTextoElemento('p', 'El número secreo es menor')
+        }
+        else {
+                    asignarTextoElemento('p', 'El número secreto es mayor');
+                }
+            }
+        
+    
     return;
 }
 
-function generarNumeroSecreto()
-{
+
+function generarNumeroSecreto(){
     return Math.floor(Math.random() * 10)+1;
 }
 
