@@ -57,6 +57,7 @@ function reiniciarJuego(){
     //Inicializar el numero de intentos
     condicionesIniciales();
     //deshabilitar boton de nuevo juego
+    document.querySelector('#reiniciar').setAttribute('disabled', 'true');
 }
 
 function generarNumeroSecreto(){
