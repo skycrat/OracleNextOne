@@ -13,16 +13,31 @@ function verificarIntento(){
     if (numeroSecreto === numeroDeUsuario) {
         asignarTextoElemento('p', `Acertaste el número en ${intentos} ${intentos == 1 ? 'vez':'veces'}`);
     }  else {
+        //El usuario no acertó
         if (numeroDeUsuario > numeroSecreto) {
             asignarTextoElemento('p', 'El número secreo es menor');
         } else {
                 asignarTextoElemento('p', 'El número secreto es mayor');
-            }
         }
-    intentos++;
+        intentos++;
+        limpiarCaja()
+        }
     return;
 }
 
+/*
+   hay una diferencia sutil entre el getElementById, que no lleva el numeral, 
+   porque él sabe que es solo por ID
+   
+   en el caso de querySelector, que es un selector genérico, 
+   le tenemos que decir que en este caso lo que queremos es por ID, 
+   usamos el numeral.
+   */
+
+function limpiarCaja(){
+    let valorCaja = document.querySelector('#valorUsuario');
+    valorCaja.value = '';
+}
 
 function generarNumeroSecreto(){
     return Math.floor(Math.random() * 10)+1;
