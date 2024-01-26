@@ -1,7 +1,7 @@
-let numeroMaximo = 10
 let listaNumerosSorteados = []
-let numeroSecreto = generarNumeroSecreto();
+let numeroMaximo = 10
 let intentos = 1
+let numeroSecreto = generarNumeroSecreto();
 
 function asignarTextoElemento(elemento, texto){
     let elementoHTML = document.querySelector(elemento);
@@ -69,15 +69,16 @@ function generarNumeroSecreto(){
     //si ya sorteamos todos los numeros
     if (listaNumerosSorteados.length == numeroMaximo){
         asignarTextoElemento('p', 'Ya se sortearon todos los numeros posibles');
-    }
-
-    //Si el numero generado esta incluido en la lista
-    if (listaNumerosSorteados.includes(numeroGenerado)){
-            return generarNumeroSecreto();
     } else {
-        listaNumerosSorteados.push(numeroGenerado);
-        return numeroGenerado;
+
+        //Si el numero generado esta incluido en la lista
+        if (listaNumerosSorteados.includes(numeroGenerado)){
+                return generarNumeroSecreto();
+        } else {
+            listaNumerosSorteados.push(numeroGenerado);
+            return numeroGenerado;
+        }
     }
-}
+}  
 
 condicionesIniciales()
